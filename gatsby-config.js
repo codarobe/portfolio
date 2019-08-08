@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Cody Robertson | Software Engineer`,
+    description: `Cody Robertson is a software engineer based in Nashville, TN specializing in full-stack web development.`,
+    author: `Cody Robertson`,
+    siteKeywords: 'Cody Robertson, Cody, Robertson, codarobe, software engineer, front-end engineer, web developer, javascript, nashville',
+    siteUrl: 'https://codyrobertson.com',
+    siteLanguage: 'en_US'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,6 +32,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
