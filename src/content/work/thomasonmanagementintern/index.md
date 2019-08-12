@@ -1,6 +1,6 @@
 ---
 date: 20160831
-title: 'Software Developer'
+title: 'Web Development Intern'
 company: 'Thomason Management (InnovationHQ)'
 location: 'Remote'
 range: 'May 2016 - August 2016'
