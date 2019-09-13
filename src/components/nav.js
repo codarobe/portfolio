@@ -1,14 +1,18 @@
 import { Link } from "gatsby"
+import IconLogo from "./icons/logo"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
+const Nav = ({ siteTitle }) => (
+  <nav
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: "#02003a",
+      marginBottom: "1.45rem",
     }}
   >
+    <div style={{height: "42px", width: "42px"}}>
+      <IconLogo />
+    </div>
     <div
       style={{
         margin: `0 auto`,
@@ -28,15 +32,15 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-  </header>
+  </nav>
 )
 
-Header.propTypes = {
+Nav.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Nav.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Nav
