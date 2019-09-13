@@ -2,7 +2,7 @@
 lead: 'Hi, my name is'
 name: 'Cody Robertson'
 subtitle: 'I love solving problems with code.'
-contactMe: 'Get in Touch'
+contactText: 'Get in Touch'
 ---
 I'm a software developer based in the Nashville, TN area.  My passion is to artfully weave code in order to elegantly and efficiently solve complex and challenging problems, no matter
 the domain.
