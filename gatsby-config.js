@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
@@ -22,7 +23,7 @@ module.exports = {
         background_color: `#00005c`,
         theme_color: `#00005c`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicons/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,
