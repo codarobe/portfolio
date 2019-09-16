@@ -1,13 +1,16 @@
 import React from "react";
-import { Layout, Hero, About } from "../components/index"
+import { Layout, Hero, About, Work, Projects } from "../components/index"
+import SEO from "../components/seo"
 import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
-      <Hero data={data.hero.edges}></Hero>
-      <About data={data.about.edges}></About>
+      <SEO title="Cody Robertson | Software Engineer" />
+      <Hero data={data.hero.edges} />
+      <About data={data.about.edges} />
+      <Work data={data.work.edges} />
+      <Projects data={data.projects.edges} />
     </Layout>
   )
 }
@@ -36,7 +39,7 @@ about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
             title
             avatar {
               childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                fluid(maxWidth: 700, quality: 80, traceSVG: { color: "#64ffda" }) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
@@ -47,8 +50,8 @@ about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
         }
       }
     }
-    jobs: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/jobs/" } }
+    work: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/work/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -58,22 +61,6 @@ about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
             company
             location
             range
-            link
-          }
-          html
-        }
-      }
-    }
-    featured: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/featured/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            technologies
-            github
             link
           }
           html
