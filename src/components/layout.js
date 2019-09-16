@@ -5,13 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 import Head from "./head";
-import { useStaticQuery, graphql } from "gatsby"
-
-import Nav from "./nav"
-import "./layout.css"
+import Nav from "./nav";
+import { GlobalStyle } from "@styles";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,6 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head metadata={data.site.siteMetadata}/>
+      <GlobalStyle/>
       <Nav siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
