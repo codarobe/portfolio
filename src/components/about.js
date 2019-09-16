@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
 const About = ({ data }) => {
@@ -7,27 +7,29 @@ const About = ({ data }) => {
     const { title, skills, avatar } = frontmatter;
     return (
         <div>
-            <h3 class="section-title">{title}</h3>
+            <h3 className="section-title">{title}</h3>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <ul class="skill-list">
-                {skills.map((skill) => (
-                    <li class="skill-item">{skill}</li>
+            <ul className="skill-list">
+                {skills.map((skill, i) => (
+                    <li className="skill-item" key={i}>{skill}</li>
                 ))}
             </ul>
-            <Img class="avatar-image" fluid={ avatar.childImageSharp.fluid }></Img>
+            <Img className="avatar-image" fluid={ avatar.childImageSharp.fluid } />
         </div>
     );
 }
 
+/*
 About.propTypes = {
     data: PropTypes.shape({
         html: PropTypes.string.isRequired,
         frontmatter: PropTypes.shape({
             title: PropTypes.string.isRequired,
             skills: PropTypes.arrayOf(PropTypes.string).isRequired,
-            avatar: PropTypes.object.isRequired
+            avatar: PropTypes.array.isRequired
         }),
     }),
 };
+ */
 
 export default About;
