@@ -16,7 +16,7 @@ const Button = styled.button`
   &:hover,
   &:focus,
   &:active {
-    background-color: white;
+    background-color: rgba(44,255,122, 0.2);
     outline: none;
   }
   &:after {
