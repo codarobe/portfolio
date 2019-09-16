@@ -249,7 +249,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   /*color: inherit;*/
-  color: white;
+  color: #00ff7a;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -267,7 +267,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   /*color: inherit;*/
-  color: white;
+  color: #a4a2c2;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -285,7 +285,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   /*color: inherit;*/
-  color: white;
+  color: #00ff7a;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -392,7 +392,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: white;
+  color: #a4a2c2;
 }
 figure {
   margin-left: 0;
