@@ -1,16 +1,15 @@
 import React from "react";
-import { Layout, Hero, About, Work, Projects } from "../components/index"
-import SEO from "../components/seo"
+import { Layout, Hero, About, Work, Projects, Contact } from "../components/index"
 import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Cody Robertson | Software Engineer" />
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
       <Work data={data.work.edges} />
       <Projects data={data.projects.edges} />
+      <Contact data={data.contact.edges} />
     </Layout>
   )
 }
