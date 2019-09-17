@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${colors.background};
     color: ${colors.textSecondary};
     line-height: 1.3;
-    font-family: arial;
+    font-family: arial, sans-serif;
     font-size: ${fontSizes.xlarge};
     ${media.phablet`font-size: ${fontSizes.large};`}
     &.hidden {
