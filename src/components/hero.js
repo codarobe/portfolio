@@ -17,7 +17,7 @@ const Hero = ({ data }) => {
     const { frontmatter, html } = data[0].node;
     const { lead, name, subtitle, contactText } = frontmatter;
     return (
-        <HeroContainer>
+        <HeroContainer id="hero">
           <h2>{lead}</h2>
           <h1>{name}</h1>
           <h3>{subtitle}</h3>
