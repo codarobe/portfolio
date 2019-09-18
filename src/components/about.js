@@ -1,13 +1,32 @@
 import React from "react";
 import styled from "styled-components"
-import { Section } from "@styles";
+import { Section, media } from "@styles";
 //import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
 const AboutContainer = styled(Section)``;
 
+const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  ${media.tablet`display: block;`};
+`;
+
+const ContentContainer = styled.div`
+  width: 60%;
+  max-width: 480px;
+  ${media.tablet`width: 100%;`};
+`;
+
 const HeadshotContainer = styled(Img)`
-  width: 100%;
+  position: relative;
+  width: 40%;
+  max-width: 300px;
+  margin-left: 60px;
+  ${media.tablet`margin: 60px auto 0;`};
+  ${media.phablet`width: 70%;`};
 `;
 
 const About = ({ data }) => {
@@ -15,14 +34,19 @@ const About = ({ data }) => {
     const { title, skills, avatar } = frontmatter;
     return (
         <AboutContainer id="about">
-            <h3 className="section-title">{title}</h3>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-            <ul className="skill-list">
+          <h3 className="section-title">{title}</h3>
+          <FlexContainer>
+            <ContentContainer>
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+              <ul className="skill-list">
                 {skills.map((skill, i) => (
-                    <li className="skill-item" key={i}>{skill}</li>
+                  <li className="skill-item" key={i}>{skill}</li>
                 ))}
-            </ul>
+              </ul>
+            </ContentContainer>
             <HeadshotContainer className="avatar-image" fluid={ avatar.childImageSharp.fluid } />
+          </FlexContainer>
+
         </AboutContainer>
     );
 }
