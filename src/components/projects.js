@@ -1,33 +1,50 @@
 import React from "react";
+import IconGitHub from "./icons/github"
+import styled from "styled-components"
+import { Section } from "@styles"
 //import PropTypes from 'prop-types';
+
+const ProjectsContainer = styled(Section)``;
+
+const TechnologiesList = styled.ul``;
+
+const Technology = styled.li`
+  display: inline-block;
+  float: left;
+  padding: 10px;
+`;
 
 const Project = (props) => {
   const { frontmatter, html } = props.data.node;
   const { title, technologies, link, github } = frontmatter;
   return (
     <div>
-      <div>{ title }</div>
+      <h4><a href={link}>{ title }</a></h4>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-      <ul className="technologies-list">
+      <TechnologiesList className="technologies-list">
         {technologies.map((item, i) => (
-          <li key={i}>{ item }</li>
+          <Technology key={i}>{ item }</Technology>
         ))}
-      </ul>
-      <div>{ link }</div>
-      <div>{ github }</div>
+      </TechnologiesList>
+      <a href={github}><IconGitHub/></a>
     </div>
   );
 };
 
+const ProjectContainer = styled.div`
+  padding: 20px;
+`
 
 const Projects = ({ data }) => {
   return (
-    <div>
+    <ProjectsContainer id="projects">
       <h3>Project Portfolio</h3>
       {data.map((project, i) => (
-        <Project key={i} data={project} />
+        <ProjectContainer>
+          <Project key={i} data={project} />
+        </ProjectContainer>
       ))}
-    </div>
+    </ProjectsContainer>
   );
 }
 
