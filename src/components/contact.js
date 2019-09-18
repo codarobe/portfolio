@@ -1,16 +1,19 @@
 import React from "react";
-import { Button } from "../styles"
+import styled from "styled-components"
+import { Button, Section } from "../styles"
 //import PropTypes from 'prop-types';
+
+const ContactContainer = styled(Section)``;
 
 const Contact = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   const { title } = frontmatter;
   return (
-    <div>
+    <ContactContainer id="contact">
       <h3>{ title }</h3>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <Button>Get in Touch</Button>
-    </div>
+    </ContactContainer>
   );
 }
 
