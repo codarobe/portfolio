@@ -40,8 +40,8 @@ const Projects = ({ data }) => {
     <ProjectsContainer id="projects">
       <h3>Project Portfolio</h3>
       {data.map((project, i) => (
-        <ProjectContainer>
-          <Project key={i} data={project} />
+        <ProjectContainer key={i}>
+          <Project data={project} />
         </ProjectContainer>
       ))}
     </ProjectsContainer>
