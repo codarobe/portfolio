@@ -1,14 +1,16 @@
 import React from "react";
+import { Section } from "@styles";
+import styled from "styled-components";
 //import PropTypes from 'prop-types';
+
+const WorkContainer = styled(Section)``;
 
 const Job = (props) => {
   const { frontmatter, html } = props.data.node;
   const { company, link, location, range, title } = frontmatter;
   return (
     <div>
-      <div>{ company }</div>
-      <div>{ title }</div>
-      <div>{ link }</div>
+      <h4>{ title } @ <a href={ link }>{ company }</a></h4>
       <div>{ location }</div>
       <div>{ range }</div>
       <div dangerouslySetInnerHTML={{ __html: html }}/>
@@ -18,12 +20,12 @@ const Job = (props) => {
 
 const Work = ({ data }) => {
   return (
-    <div>
+    <WorkContainer id="work">
       <h3>Professional Experience</h3>
       {data.map((job, i) => (
         <Job key={i} data={job} />
       ))}
-    </div>
+    </WorkContainer>
   );
 }
 
