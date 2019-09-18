@@ -19,7 +19,7 @@ const Project = (props) => {
   const { title, technologies, link, github } = frontmatter;
   return (
     <div>
-      <h4><a href={link}>{ title }</a></h4>
+      <h4><a href={link} aria-label="Link to Project">{ title }</a></h4>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <TechnologiesList className="technologies-list">
         {technologies.map((item, i) => (

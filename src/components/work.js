@@ -10,7 +10,7 @@ const Job = (props) => {
   const { company, link, location, range, title } = frontmatter;
   return (
     <div>
-      <h4>{ title } @ <a href={ link }>{ company }</a></h4>
+      <h4>{ title } @ <a href={ link } aria-label="Link to Company">{ company }</a></h4>
       <div>{ location }</div>
       <div>{ range }</div>
       <div dangerouslySetInnerHTML={{ __html: html }}/>
