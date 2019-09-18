@@ -4,7 +4,7 @@ title: 'Web Development Intern'
 company: 'Thomason Management (InnovationHQ)'
 location: 'Remote'
 range: 'May 2016 - August 2016'
-url: 'https://innovationhq.com/'
+link: 'https://innovationhq.com/'
 technologies:
     - PHP
     - Javascript

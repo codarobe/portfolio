@@ -4,7 +4,7 @@ title: 'Software Developer'
 company: 'Thomason Management (InnovationHQ)'
 location: 'Remote'
 range: 'August 2016 - June 2018'
-url: 'https://innovationhq.com/'
+link: 'https://innovationhq.com/'
 technologies:
     - PHP
     - Javascript

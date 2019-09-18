@@ -4,7 +4,7 @@ title: 'Software Developer'
 company: 'Core10'
 location: 'Franklin, TN'
 range: 'July 2018 - Present'
-url: 'https://core10.io'
+link: 'https://core10.io'
 technologies:
     - C#
     - AngularJS
