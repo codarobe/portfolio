@@ -26,7 +26,7 @@ const Project = (props) => {
           <Technology key={i}>{ item }</Technology>
         ))}
       </TechnologiesList>
-      <a href={github}><IconGitHub/></a>
+      <a href={github} aria-label="Link to Project Source on GitHub"><IconGitHub/></a>
     </div>
   );
 };
