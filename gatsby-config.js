@@ -20,8 +20,8 @@ module.exports = {
         name: `Cody Robertson`,
         short_name: `codyrobertson`,
         start_url: `/`,
-        background_color: `#00005c`,
-        theme_color: `#00005c`,
+        background_color: `#09071d`,
+        theme_color: `#09071d`,
         display: `minimal-ui`,
         icon: `src/images/favicons/favicon-32x32.png`, // This path is relative to the root of the site.
       },
