@@ -24,8 +24,8 @@ const GlobalStyle = createGlobalStyle`
     color: ${colors.textSecondary};
     line-height: 1.3;
     font-family: arial, sans-serif;
-    font-size: ${fontSizes.xlarge};
-    ${media.phablet`font-size: ${fontSizes.large};`}
+    font-size: ${fontSizes.large};
+    ${media.phablet`font-size: ${fontSizes.medium};`}
     &.hidden {
       overflow: hidden;
     }
@@ -50,6 +50,9 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     color: ${colors.textPrimary};
     margin: 0 0 10px 0;
+  }
+  h3 {
+    font-size: ${fontSizes.h3}
   }
   #root {
     min-height: 100vh;
