@@ -12,7 +12,7 @@ const Contact = ({ data }) => {
     <ContactContainer id="contact">
       <h3>{ title }</h3>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-      <Button>Get in Touch</Button>
+      <a href="mailto:codyallanrobertson@gmail.com" aria-label="Email Cody Robertson"><Button>Get in Touch</Button></a>
     </ContactContainer>
   );
 }

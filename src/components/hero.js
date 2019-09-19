@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import { media, Section, Button } from '@styles'
+import { media, Section, Button, theme } from '@styles'
 //import PropTypes from 'prop-types';
 
 const HeroContainer = styled(Section)`
@@ -12,17 +12,49 @@ const HeroContainer = styled(Section)`
     width: 100%;
   }
 `;
+const Lead = styled.h2`
+  font-size: ${theme.fontSizes.large};
+  color: ${theme.colors.highlight};
+  ${media.desktop`font-size: ${theme.fontSizes.medium};`};
+  ${media.tablet`font-size: ${theme.fontSizes.small};`};
+`;
+
+const Name = styled.h1`
+  font-size: 60px;
+  ${media.desktop`font-size: 70px;`};
+  ${media.tablet`font-size: 60px;`};
+  ${media.phablet`font-size: 50px;`};
+  ${media.phone`font-size: 40px;`};
+  color: ${theme.colors.textPrimary};
+  line-height: 1.1;
+`;
+
+const Subtitle = styled.h3`
+  font-size: 60px;
+  ${media.desktop`font-size: 50px;`};
+  ${media.tablet`font-size: 40px;`};
+  ${media.phablet`font-size: 30px;`};
+  ${media.phone`font-size: 20px;`};
+  color: ${theme.colors.textSecondary};
+  line-height: 1.1;
+`;
+
+const Content = styled.div`
+  margin-top: 25px;
+  width: 50%;
+  max-width: 500px;
+`;
 
 const Hero = ({ data }) => {
     const { frontmatter, html } = data[0].node;
     const { lead, name, subtitle, contactText } = frontmatter;
     return (
         <HeroContainer id="hero">
-          <h2>{lead}</h2>
-          <h1>{name}</h1>
-          <h3>{subtitle}</h3>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-          <Button>{ contactText}</Button>
+          <Lead>{lead}</Lead>
+          <Name>{name}</Name>
+          <Subtitle>{subtitle}</Subtitle>
+          <Content dangerouslySetInnerHTML={{ __html: html }} />
+          <a href="mailto:codyallanrobertson@gmail.com" aria-label="Email Cody Robertson"><Button>{ contactText}</Button></a>
         </HeroContainer>
     );
 }
