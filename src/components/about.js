@@ -31,7 +31,7 @@ const Skill = styled.li`
   position: relative;
   margin-bottom: 10px;
   padding-left: 20px;
-  font-size: ${theme.fontSizes.smallish};
+  font-size: ${theme.fontSizes.small};
   &:before {
     content: '▹';
     position: absolute;
