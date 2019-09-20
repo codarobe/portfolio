@@ -42,7 +42,13 @@ const Layout = ({ children }) => {
           <footer>
           © {new Date().getFullYear()}, Built by
           {` `}
-          <a href="https://www.linkedin.com/in/codyrobertson" aria-label="Link to LinkedIn Portfolio">Cody Robertson</a>
+          <a href="https://www.linkedin.com/in/codyrobertson"
+             aria-label="Link to LinkedIn Portfolio"
+             target="_blank"
+             rel="noopener noreferrer nofollow"
+          >
+            Cody Robertson
+          </a>
         </footer>
       </div>
     </>
