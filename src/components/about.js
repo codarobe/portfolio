@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import { Section, media } from "@styles";
+import { Section, media, theme } from "@styles";
 //import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
@@ -20,10 +20,30 @@ const ContentContainer = styled.div`
   ${media.tablet`width: 100%;`};
 `;
 
+const SkillList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  overflow: hidden;
+  margin-top: 20px;
+`;
+
+const Skill = styled.li`
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-size: ${theme.fontSizes.smallish};
+  &:before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: ${theme.colors.highlight};
+    line-height: 12px;
+  }
+`;
+
 const HeadshotContainer = styled(Img)`
   position: relative;
   width: 40%;
-  max-width: 300px;
   margin-left: 60px;
   ${media.tablet`margin: 60px auto 0;`};
   ${media.phablet`width: 70%;`};
@@ -38,11 +58,11 @@ const About = ({ data }) => {
           <FlexContainer>
             <ContentContainer>
               <div dangerouslySetInnerHTML={{ __html: html }} />
-              <ul className="skill-list">
+              <SkillList>
                 {skills.map((skill, i) => (
-                  <li className="skill-item" key={i}>{skill}</li>
+                  <Skill className="skill-item" key={i}>{skill}</Skill>
                 ))}
-              </ul>
+              </SkillList>
             </ContentContainer>
             <HeadshotContainer className="avatar-image" fluid={ avatar.childImageSharp.fluid } />
           </FlexContainer>
