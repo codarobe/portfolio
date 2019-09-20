@@ -37,7 +37,14 @@ const Nav = ({ siteTitle }) => (
       <div style={{
         float: "right"
       }}>
-        <a href="https://www.dropbox.com/s/54bw7z0xaeqh2ch/Resume%20-%20Working%20Copy.pdf?dl=0" target="_blank" aria-label="Link to Resume"><Button>Résumé</Button></a>
+        <a
+          href="https://www.dropbox.com/s/54bw7z0xaeqh2ch/Resume%20-%20Working%20Copy.pdf?dl=0"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          aria-label="Link to Resume"
+        >
+          <Button>Résumé</Button>
+        </a>
       </div>
     </div>
   </nav>
