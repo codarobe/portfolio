@@ -2,13 +2,15 @@
 title: 'About Me'
 avatar: './headshot.jpg'
 skills:
-    - Javascript and Typescript
-    - Angular
-    - React
-    - Docker
-    - GraphQL
     - Python
-    - AWS and Azure
+    - Javascript and Typescript
+    - React
+    - Angular and AngularJS
+    - Docker
+    - REST
+    - GraphQL
+    - AWS
+    - Azure
     - Rust
 ---
 When I'm not working or building personal projects, I enjoy reading books by my favorite author David Mitchell, learning Japanese with my fie, and playing fetch with my cat Loki.
