@@ -1,9 +1,29 @@
 import React from "react";
-import { Section } from "@styles";
+import { Section, theme } from "@styles";
 import styled from "styled-components";
 //import PropTypes from 'prop-types';
 
 const WorkContainer = styled(Section)``;
+
+const JobContainer = styled.div`
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: ${theme.fontSizes.large};
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: ${theme.colors.highlight};
+        line-height: ${theme.fontSizes.xlarge};
+      }
+    }
+`;
 
 const Job = (props) => {
   const { frontmatter, html } = props.data.node;
@@ -23,7 +43,9 @@ const Work = ({ data }) => {
     <WorkContainer id="work">
       <h3>Professional Experience</h3>
       {data.map((job, i) => (
-        <Job key={i} data={job} />
+        <JobContainer key={i}>
+          <Job data={job} />
+        </JobContainer>
       ))}
     </WorkContainer>
   );
