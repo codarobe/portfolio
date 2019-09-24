@@ -33,7 +33,7 @@ const Skill = styled.li`
   padding-left: 20px;
   font-size: ${theme.fontSizes.small};
   &:before {
-    content: '▹';
+    content: '▸';
     position: absolute;
     left: 0;
     color: ${theme.colors.highlight};
