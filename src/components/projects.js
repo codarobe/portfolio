@@ -1,7 +1,7 @@
 import React from "react";
 import IconGitHub from "./icons/github"
 import styled from "styled-components"
-import { Section } from "@styles"
+import { Section, theme, ExternalLink } from "@styles"
 //import PropTypes from 'prop-types';
 
 const ProjectsContainer = styled(Section)``;
@@ -12,22 +12,39 @@ const Technology = styled.li`
   display: inline-block;
   float: left;
   padding: 10px;
+  font-size: ${theme.fontSizes.small};
+`;
+
+const CardContainer = styled.div`
+  padding: 10px;
+`;
+
+const IconLink = styled.a`
+  position: inline-block;
+  top: -10px;
+  padding-top: 10px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const Project = (props) => {
   const { frontmatter, html } = props.data.node;
   const { title, technologies, link, github } = frontmatter;
   return (
-    <div>
-      <h4><a href={link} aria-label="Link to Project">{ title }</a></h4>
+    <CardContainer>
+      <h4><ExternalLink target="_blank" rel="noopener nofollow noreferrer" href={link} aria-label="Link to Project">{ title }</ExternalLink></h4>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <TechnologiesList className="technologies-list">
         {technologies.map((item, i) => (
           <Technology key={i}>{ item }</Technology>
         ))}
       </TechnologiesList>
-      <a href={github} aria-label="Link to Project Source on GitHub"><IconGitHub/></a>
-    </div>
+      {github && (
+        <IconLink href={github} aria-label="Link to Project Source on GitHub" target="_blank" rel="noopener nofollow noreferrer"><IconGitHub/></IconLink>
+      )}
+    </CardContainer>
   );
 };
 
