@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   ::selection {
-    background-color: ${colors.highlight};
+    background-color: #262188;
   }
   h1,
   h2,
