@@ -1,7 +1,7 @@
 ---
 title: 'codyrobertson.com'
 link: 'https://codyrobertson.com'
-github: 'https://github.com/codarobe/codyrobertson.com'
+github: 'https://github.com/codarobe/portfolio'
 technologies:
     - Gatsby
     - GraphQL
