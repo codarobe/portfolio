@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, theme } from "@styles";
+import { Section, theme, ExternalLink } from "@styles";
 import styled from "styled-components";
 //import PropTypes from 'prop-types';
 
@@ -16,7 +16,7 @@ const JobContainer = styled.div`
       padding-left: 30px;
       margin-bottom: 10px;
       &:before {
-        content: '▹';
+        content: '▸';
         position: absolute;
         left: 0;
         color: ${theme.colors.highlight};
@@ -30,9 +30,10 @@ const Job = (props) => {
   const { company, link, location, range, title } = frontmatter;
   return (
     <div>
-      <h4>{ title } @ <a href={ link } aria-label="Link to Company">{ company }</a></h4>
-      <div>{ location }</div>
+      <h4>{ title } @ <ExternalLink href={ link } target="_blank" rel="noopener nofollow noreferrer" aria-label="Link to Company">{ company }</ExternalLink></h4>
       <div>{ range }</div>
+      <div>{ location }</div>
+      <br/>
       <div dangerouslySetInnerHTML={{ __html: html }}/>
     </div>
   );
