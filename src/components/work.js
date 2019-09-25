@@ -6,6 +6,7 @@ import styled from "styled-components";
 const WorkContainer = styled(Section)``;
 
 const JobContainer = styled.div`
+  padding: 10px;
   ul {
     padding: 0;
     margin: 0;
