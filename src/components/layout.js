@@ -9,8 +9,30 @@ import React from "react";
 import PropTypes from "prop-types";
 import Head from "./head";
 import Nav from "./nav";
+import styled from "styled-components";
 import { GlobalStyle } from "@styles";
 import { useStaticQuery, graphql } from "gatsby";
+import IconLinkedIn from "./icons/linkedin"
+import IconGitHub from "./icons/github"
+
+const Footer = styled.footer`
+  text-align: center;
+  padding: 30px;
+`;
+
+const FooterContentContainer = styled.div`
+  padding: 10px;
+`
+
+const IconLink = styled.a`
+  position: inline-block;
+  top: -10px;
+  padding: 10px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,18 +61,30 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-          <footer>
+      </div>
+      <Footer>
+        <FooterContentContainer>
           © {new Date().getFullYear()}, Built by
           {` `}
-          <a href="https://www.linkedin.com/in/codyrobertson"
-             aria-label="Link to LinkedIn Portfolio"
-             target="_blank"
-             rel="noopener noreferrer nofollow"
+          Cody Robertson
+        </FooterContentContainer>
+        <FooterContentContainer>
+            <IconLink href="https://www.linkedin.com/in/codyrobertson"
+                      aria-label="Link to LinkedIn Portfolio"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+            >
+              <IconLinkedIn/>
+            </IconLink>
+          <IconLink href="https://www.github.com/codarobe"
+                    aria-label="Link to GitHub Portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
           >
-            Cody Robertson
-          </a>
-        </footer>
-      </div>
+            <IconGitHub/>
+          </IconLink>
+        </FooterContentContainer>
+      </Footer>
     </>
   )
 }
