@@ -26,6 +26,7 @@ const Head = ({ metadata }) => (
       <meta property="og:image:type" content="image/png" />
       <meta itemProp="name" content={metadata.title} />
       <meta itemProp="description" content={metadata.description} />
+      <meta name="google-site-verification" content="NPy31AwaRAsLv7r7iM1KiaVqOW8uk0gXT91ujXzT7RY" />
 
     <link rel="apple-touch-icon" sizes="180x180" href={ appleTouchIcon } />
     <link rel="icon" type="image/png" sizes="32x32" href={ favicon32x32 } />
