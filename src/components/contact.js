@@ -3,7 +3,9 @@ import styled from "styled-components"
 import { Button, Section } from "../styles"
 //import PropTypes from 'prop-types';
 
-const ContactContainer = styled(Section)``;
+const ContactContainer = styled(Section)`
+  min-height: 75vh;
+`;
 
 const Contact = ({ data }) => {
   const { frontmatter, html } = data[0].node;
