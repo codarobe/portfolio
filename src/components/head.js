@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-//import config from '@config';
 
 import favicon from '@images/favicons/favicon.ico';
 import favicon32x32 from '@images/favicons/favicon-32x32.png';
