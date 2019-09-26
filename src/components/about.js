@@ -64,7 +64,7 @@ const About = ({ data }) => {
                 ))}
               </SkillList>
             </ContentContainer>
-            <HeadshotContainer className="avatar-image" fluid={ avatar.childImageSharp.fluid } />
+            <HeadshotContainer className="avatar-image" fluid={ avatar.childImageSharp.fluid } alt="Headshot of Cody Robertson"/>
           </FlexContainer>
 
         </AboutContainer>
