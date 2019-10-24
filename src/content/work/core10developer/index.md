@@ -3,7 +3,7 @@ date: 20190812
 title: 'Software Developer'
 company: 'Core10'
 location: 'Franklin, TN'
-range: 'July 2018 - Present'
+range: 'July 2018 - August 2019'
 link: 'https://core10.io'
 technologies:
     - C#
