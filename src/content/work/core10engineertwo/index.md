@@ -13,5 +13,5 @@ technologies:
     - SQLServer
 ---
 - Served as team lead of the project's frontline team, leading a team of developers to quickly and effectively triage, unblock, and correct critical production issues daily.
-- Assisted with recruitment, regularly interviewing applicants for positions at Core.
+- Assisted with recruitment, regularly interviewing applicants for positions at Core10.
 - Onboarded new team members and created project documentation to improve future onboarding initiatives.
