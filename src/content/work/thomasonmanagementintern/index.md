@@ -10,6 +10,6 @@ technologies:
     - Javascript
     - Wordpress
 ---
-- Worked as one of two key developers to design, build, and deploy [DUIAttorney.com](https://duiattorney.com)
-- Created dynamically generated pages with statistics and graphs for all US states, counties, and cities from zip codes and census data
-- Performed SEO optimization for [DUIAttorney.com](https://duiattorney.com) and [WhatIsMyIP.com](https://whatismyip.com)
+- Full-stack development of sites such as DUIAttorney.com and WhatIsMyIP.com using PHP, JavaScript, and MySQL
+- Assisted with site deployments and engineering reverse proxying and load balancing with Nginx and Apache
+- Created a prediction algorithm for determining most valuable domains owned and available for purchase in Node.js saving thousands of dollars per year in manual text analysis and increasing revenue through more effective purchasing

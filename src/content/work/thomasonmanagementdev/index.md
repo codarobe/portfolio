@@ -14,8 +14,5 @@ technologies:
     - Python
     - Selenium
 ---
-- Created new and extended existing network tools for [WhatIsMyIP.com](https://whatismyip.com) and introduced Questions and Answers section
-- Implemented Node.js solution to a modified longest common substring problem, reducing the manual parsing performed by multiple employees over a full month to a 2.5-hour batch job executed at the beginning of each month
-- Created web scraping and automation scripts to remotely manage thousands of owned domains across multiple hosting providers via a single command
-- Created internal iOS app and browser extensions for testing network tools
-- Performed SEO optimization for various sites owned by the company
+- Automated management of thousands of domains across multiple providers using Python, Scrapy, and Selenium
+- Designed and developed internal iOS application to take advantage of WhatIsMyIP's REST API

@@ -2,7 +2,6 @@ import React from "react";
 import IconGitHub from "./icons/github"
 import styled from "styled-components"
 import { Section, theme, ExternalLink } from "@styles"
-//import PropTypes from 'prop-types';
 
 const ProjectsContainer = styled(Section)``;
 
@@ -64,19 +63,5 @@ const Projects = ({ data }) => {
     </ProjectsContainer>
   );
 }
-
-/*
-Projects.propTypes = {
-  data: PropTypes.shape({
-    html: PropTypes.string.isRequired,
-    frontmatter: PropTypes.shape({
-      lead: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      subtitle: PropTypes.string.isRequired,
-      contactText: PropTypes.string.isRequired
-    }),
-  }),
-};
-*/
 
 export default Projects;

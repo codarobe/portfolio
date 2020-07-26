@@ -2,6 +2,7 @@
 title: 'NASM Tic-Tac-Toe AI'
 github: 'https://github.com/Jerrgree/Tic-Tac-Toe'
 link: 'https://github.com/Jerrgree/Tic-Tac-Toe'
+date: 20150101
 technologies:
     - NASM Assembly
 ---
