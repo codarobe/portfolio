@@ -1,7 +1,7 @@
 ---
 title: 'codyrobertson.com'
 link: 'https://codyrobertson.com'
-github: 'https://github.com/codarobe/portfolio'
+github: 'https://github.com/cody-robertson/portfolio'
 date: 20200101
 technologies:
     - Gatsby

@@ -1,7 +1,7 @@
 ---
 title: 'Multiplayer Concurrency'
 link: 'https://www.dropbox.com/s/988mg2sgqnqcobr/Multiplayer%20Concurrence.pptx?dl=0'
-github: 'https://github.com/codarobe/multiplayer-concurrency'
+github: 'https://github.com/cody-robertson/multiplayer-concurrency'
 date: 20180501
 technologies:
     - Unity

@@ -13,5 +13,5 @@ technologies:
     - SQLServer
     - Python
 ---
-- Triaged and corrected critical production issues daily for a large development team of a financial CRM with thousands of subscribed organizations using ASP.NET, AngularJS, SQL Server, Redis, and Azure
-- Profiled existing SQL stored procedures to make data-driven prioritizations for optimizing execution time from minutes to seconds resulting in much happier customers
+- Triaged and corrected critical production issues in our cloud web application daily for a large financial CRM development team with thousands of subscribed institutions using ASP.NET, AngularJS, SQL Server, Redis, and Azure
+- Profiled existing stored procedures in the database to make data-driven prioritizations for optimizing execution time from minutes to seconds resulting in much happier customers
