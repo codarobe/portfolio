@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components"
 import { Button, Section } from "../styles"
-//import PropTypes from 'prop-types';
 
 const ContactContainer = styled(Section)`
   min-height: 75vh;
@@ -18,18 +17,5 @@ const Contact = ({ data }) => {
     </ContactContainer>
   );
 }
-
-/*
-About.propTypes = {
-    data: PropTypes.shape({
-        html: PropTypes.string.isRequired,
-        frontmatter: PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            skills: PropTypes.arrayOf(PropTypes.string).isRequired,
-            avatar: PropTypes.array.isRequired
-        }),
-    }),
-};
-*/
 
 export default Contact;
