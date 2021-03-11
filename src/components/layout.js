@@ -76,7 +76,7 @@ const Layout = ({ children }) => {
             >
               <IconLinkedIn/>
             </IconLink>
-          <IconLink href="https://www.github.com/codarobe"
+          <IconLink href="https://www.github.com/cody-robertson"
                     aria-label="Link to GitHub Portfolio"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
