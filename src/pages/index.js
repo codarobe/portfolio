@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react"
 import { Layout, Hero, About, Work, Projects, Contact } from "../components/index"
 import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
+
+  useEffect(() => {
+    // Create an intersection observer with default options, that
+    // triggers a class on/off depending on an element’s visibility
+    // in the viewport
+    const animationObserver = new IntersectionObserver((entries, observer) => {
+      for (const entry of entries) {
+        entry.target.classList.toggle('animated', entry.isIntersecting)
+      }
+    });
+
+    // Use that IntersectionObserver to observe the visibility
+    // of some elements
+    for (const element of document.querySelectorAll('.build-in-animate')) {
+      animationObserver.observe(element);
+    }
+  });
+
   return (
     <Layout>
       <Hero data={data.hero.edges} />

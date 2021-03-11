@@ -32,7 +32,7 @@ const Project = (props) => {
   const { frontmatter, html } = props.data.node;
   const { title, technologies, link, github } = frontmatter;
   return (
-    <CardContainer>
+    <CardContainer className='build-in-animate'>
       <h4><ExternalLink target="_blank" rel="noopener nofollow noreferrer" href={link} aria-label="Link to Project">{ title }</ExternalLink></h4>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <TechnologiesList className="technologies-list">
@@ -53,7 +53,7 @@ const ProjectContainer = styled.div`
 
 const Projects = ({ data }) => {
   return (
-    <ProjectsContainer id="projects">
+    <ProjectsContainer id="projects" className='build-in-animate'>
       <h3>Project Portfolio</h3>
       {data.map((project, i) => (
         <ProjectContainer key={i}>

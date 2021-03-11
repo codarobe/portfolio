@@ -148,6 +148,16 @@ const GlobalStyle = createGlobalStyle`
     opacity: 1;
     transition: opacity 1000ms ${theme.easing};
   }
+
+  .build-in-animate {
+      opacity: 0.01;
+  }
+  
+  .animated {
+      opacity: 1;
+      transform: translateY(10px);
+      transition: opacity 1000ms ${theme.easing}, transform 1000ms ${theme.easing};
+  }
 `;
 
 export default GlobalStyle;

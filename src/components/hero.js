@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react"
 import styled from 'styled-components';
 import { media, Section, Button, theme } from '@styles'
-//import PropTypes from 'prop-types';
 
 const HeroContainer = styled(Section)`
   flex-direction: column;
@@ -10,7 +9,7 @@ const HeroContainer = styled(Section)`
   ${media.tablet`padding-top: 150px;`};
   div {
     width: 100%;
-  }
+  },
 `;
 const Lead = styled.h2`
   font-size: ${theme.fontSizes.large};
@@ -48,8 +47,26 @@ const Content = styled.div`
 const Hero = ({ data }) => {
     const { frontmatter, html } = data[0].node;
     const { lead, name, subtitle, contactText } = frontmatter;
+
+  // useEffect(() => {
+  //   // Create an intersection observer with default options, that
+  //   // triggers a class on/off depending on an element’s visibility
+  //   // in the viewport
+  //   const animationObserver = new IntersectionObserver((entries, observer) => {
+  //     for (const entry of entries) {
+  //       entry.target.classList.toggle('animated', entry.isIntersecting)
+  //     }
+  //   });
+  //
+  //   // Use that IntersectionObserver to observe the visibility
+  //   // of some elements
+  //   for (const element of document.querySelectorAll('.build-in-animate')) {
+  //     animationObserver.observe(element);
+  //   }
+  // });
+
     return (
-        <HeroContainer id="hero">
+        <HeroContainer id="hero" className='build-in-animate'>
           <Lead>{lead}</Lead>
           <Name>{name}</Name>
           <Subtitle>{subtitle}</Subtitle>
@@ -58,19 +75,5 @@ const Hero = ({ data }) => {
         </HeroContainer>
     );
 }
-
-/*
-Hero.propTypes = {
-    data: PropTypes.shape({
-        html: PropTypes.string.isRequired,
-        frontmatter: PropTypes.shape({
-            lead: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired,
-            subtitle: PropTypes.string.isRequired,
-            contactText: PropTypes.string.isRequired
-        }),
-    }),
-};
-*/
 
 export default Hero;
