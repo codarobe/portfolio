@@ -1,7 +1,6 @@
 import React from "react";
 import { Section, theme, ExternalLink } from "@styles";
 import styled from "styled-components";
-//import PropTypes from 'prop-types';
 
 const WorkContainer = styled(Section)``;
 
@@ -30,7 +29,7 @@ const Job = (props) => {
   const { frontmatter, html } = props.data.node;
   const { company, link, location, range, title } = frontmatter;
   return (
-    <div>
+    <div className='build-in-animate'>
       <h4>{ title } @ <ExternalLink href={ link } target="_blank" rel="noopener nofollow noreferrer" aria-label="Link to Company">{ company }</ExternalLink></h4>
       <div>{ range }</div>
       <div>{ location }</div>
@@ -42,7 +41,7 @@ const Job = (props) => {
 
 const Work = ({ data }) => {
   return (
-    <WorkContainer id="work">
+    <WorkContainer id="work" className='build-in-animate' >
       <h3>Professional Experience</h3>
       {data.map((job, i) => (
         <JobContainer key={i}>
@@ -52,19 +51,5 @@ const Work = ({ data }) => {
     </WorkContainer>
   );
 }
-
-/*
-Work.propTypes = {
-  data: PropTypes.shape({
-    html: PropTypes.string.isRequired,
-    frontmatter: PropTypes.shape({
-      lead: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      subtitle: PropTypes.string.isRequired,
-      contactText: PropTypes.string.isRequired
-    }),
-  }),
-};
-*/
 
 export default Work;

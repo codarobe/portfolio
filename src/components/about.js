@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components"
 import { Section, media, theme } from "@styles";
-//import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
 const AboutContainer = styled(Section)``;
@@ -53,7 +52,7 @@ const About = ({ data }) => {
     const { frontmatter, html } = data[0].node;
     const { title, skills, avatar } = frontmatter;
     return (
-        <AboutContainer id="about">
+        <AboutContainer id="about" className='build-in-animate' >
           <h3 className="section-title">{title}</h3>
           <FlexContainer>
             <ContentContainer>
@@ -70,18 +69,5 @@ const About = ({ data }) => {
         </AboutContainer>
     );
 }
-
-/*
-About.propTypes = {
-    data: PropTypes.shape({
-        html: PropTypes.string.isRequired,
-        frontmatter: PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            skills: PropTypes.arrayOf(PropTypes.string).isRequired,
-            avatar: PropTypes.array.isRequired
-        }),
-    }),
-};
- */
 
 export default About;
