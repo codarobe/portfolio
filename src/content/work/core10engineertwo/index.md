@@ -3,7 +3,7 @@ date: 20200501
 title: 'Internal Project Lead / Software Engineer II'
 company: 'Core10'
 location: 'Franklin, TN'
-range: 'May 2020 - Present'
+range: 'May 2020 - April 2021'
 link: 'https://core10.io'
 technologies:
     - C# 

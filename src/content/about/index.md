@@ -2,10 +2,10 @@
 title: 'About Me'
 avatar: './headshot.jpg'
 skills:
+    - C#
     - Python
     - Node.js
-    - React
-    - Angular
+    - Angular & React
     - Docker
     - REST & SOAP
     - GraphQL
